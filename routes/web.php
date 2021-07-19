@@ -13,7 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $nom = "Loïc";
-    return view('loic', compact('nom'));
+Route::get('/loic', function () {
+    $nom = "<h2>Loic</h2>";
+    return $nom;
+});
+
+Route::get('/variable', function () {
+    $route = route('/variable');
+    return view('welcome', compact('route'));
 });
