@@ -18,7 +18,7 @@ Route::get('/loic', function () {
     return $nom;
 });
 
-Route::get('/variable', function () {
-    $route = route('/variable');
-    return view('welcome', compact('route'));
+Route::get('/welcome/{variable}', function ($p) {
+    $p = 5;
+    return view('welcome', compact('p'));
 });
